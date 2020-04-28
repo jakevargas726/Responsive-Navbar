@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background: #232323;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  height: 24px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-items li {
+  padding: 0 0.5rem;
+}
+
+.navbar-items a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-items a:hover {
+  color: #408697;
+}
+
+.brand {
+  margin-left: 1rem;
+}
+
+.brand a {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.brand a:hover {
+  color: #408697;
+}
+
+.head {
+  width: 100%;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-icon:focus {
+  outline: none;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+.menu-icon:hover .menu-line {
+  background-color: #408697;
+}
+
+.menu-line {
+  width: 24px;
+  height: 3px;
+  background: white;
+}
+
+.side-menu {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  clip-path: circle(0 at 25px 25px);
+  transition: clip-path 0.5s;
+  -webkit-transition: clip-path 0.5s;
+}
+
+.side-menu ul {
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 4vh;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #f6f6f6;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+.side-menu a:hover {
+  color: #408697;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.side-menu.open {
+  clip-path: circle(150% at 25px 25px);
+  transition: clip-path 0.5s;
+  -webkit-transition: clip-path 0.5s;      
+}
+
+.body {
+  padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+ 
+  .side-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem 1rem 0;
+  } 
+}
+
+@media screen and (max-width: 699px) {
+  .navbar-items {
+    display: none;
+  } 
+}
